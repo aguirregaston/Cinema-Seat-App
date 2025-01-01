@@ -1,0 +1,102 @@
+:root {
+  --bg-one: #0f0f14;
+  --bg-two: #0f0f10;
+  --active: #d2f400;
+  --white: #fff;
+  --gray: #3a3a4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, var(--bg-one), var(--bg-two));
+  color: var(--white);
+}
+
+.container {
+  width: fit-content;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.screen {
+  background: var(--gray);
+  height: 2px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.seat {
+  background-color: var(--gray);
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.seat:hover {
+  background: #4f4f69;
+}
+
+.seat.selected {
+  background-color: var(--active);
+}
+
+.seat.occupied {
+  background-color: var(--bg-one);
+  border: 1px solid #7c0000;
+  cursor: not-allowed;
+}
+
+.info {
+  margin-top: 20px;
+}
+
+.info span {
+  display: flex;
+  margin: 10px 10px;
+  gap: 5px;
+  user-select: none;
+}
+
+.info .seat {
+  margin: 0;
+  cursor: default;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background: var(--active);
+  color: var(--bg-one);
+  border: none;
+}
+
+button:hover {
+  background: #c7e600;
+}
